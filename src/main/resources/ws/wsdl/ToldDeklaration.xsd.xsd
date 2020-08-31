@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://skat.dk/begrebsmodel/2009/01/15/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fase2.1="http://skat.dk/begrebsmodel/2009/01/15/">
+  <xs:annotation>
+    <xs:documentation>Begreber der skal bruges på en import deklaration i importsystemet. Deklarationerne kan enten være
+      ekspresfortoldning (FUE/FOE) eller standardfortoldning.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="TalHel13Type.xsd.xsd"/>
+  <xs:include schemaLocation="Tal3Type.xsd.xsd"/>
+  <xs:include schemaLocation="BeloebPositiv11Decimaler3Type.xsd.xsd"/>
+  <xs:include schemaLocation="DatoTidType.xsd.xsd"/>
+  <xs:include schemaLocation="Tekst5Type.xsd.xsd"/>
+  <xs:element name="ToldDeklarationReferenceNummer" type="fase2.1:TalHel13Type">
+    <xs:annotation>
+      <xs:documentation>Referencenummer der entydigt identificerer en import deklaration. Består af Årstal, systemkode
+        på to cifre, og et fortløbende nummer.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ToldDeklarationAntalVareposter" type="fase2.1:Tal3Type">
+    <xs:annotation>
+      <xs:documentation>Beskriver hvor mange vareposter der er på fortoldningen.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ToldDeklarationTotalBruttoVægt" type="fase2.1:BeløbPositiv11Decimaler3Type">
+    <xs:annotation>
+      <xs:documentation>Vareposternes samlede vægt</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ToldDeklarationForventetAnkomstDatoTid" type="fase2.1:DatoTidType">
+    <xs:annotation>
+      <xs:documentation>Dato for den forventede ankomst af de varer der er angivet på fortoldningen.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ToldDeklarationStatusKode" type="fase2.1:Tekst5Type">
+    <xs:annotation>
+      <xs:documentation>Status for fortoldningen</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

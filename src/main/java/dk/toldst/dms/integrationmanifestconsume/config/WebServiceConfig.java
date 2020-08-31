@@ -34,10 +34,10 @@ public class WebServiceConfig extends DelegatingWsConfiguration {
         return new ServletRegistrationBean<>(servlet, "/ws/" + "*");
     }
 
-    @Bean(name="FortoldningsangivelseHent_unsecure")
+    @Bean(name="FortoldningsangivelseOpdater_unsecure")
     public SimpleWsdl11Definition defaultWsdl11Definition() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("/wsdl/FortoldningsangivelseHent_unsecure.wsdl"));
+        wsdl11Definition.setWsdl(new ClassPathResource("/wsdl/FortoldningsangivelseOpdater_unsecure.wsdl"));
 
         return wsdl11Definition;
     }

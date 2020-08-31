@@ -67,7 +67,7 @@ task generateJavaClasses {
 		ant.jaxbTargetDir = jaxbTargetDir
 		ant.xjc(
 				destdir: '${jaxbTargetDir}',
-				schema: 'src/main/resources/ws/wsdl/FortoldningsangivelseHent_unsecure.wsdl',
+				schema: 'src/main/resources/ws/wsdl/FortoldningsangivelseOpdater_unsecure.wsdl',
 				language: 'WSDL',
 				encoding:'UTF-8'
 		)

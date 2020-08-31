@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://skat.dk/begrebsmodel/2009/01/15/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fase2.1="http://skat.dk/begrebsmodel/2009/01/15/">
+  <xs:annotation>
+    <xs:documentation>Summarisk angivelse, i transitsystemet</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="MRNType.xsd.xsd"/>
+  <xs:include schemaLocation="Tekst3Type.xsd.xsd"/>
+  <xs:include schemaLocation="TalMarkeringType.xsd.xsd"/>
+  <xs:element name="TransitMRNNummer" type="fase2.1:MRNType">
+  </xs:element>
+  <xs:element name="TransitStatusKode" type="fase2.1:Tekst3Type">
+    <xs:annotation>
+      <xs:documentation>Status kode for en transitangivelse</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TransitSikkerhedMarkering" type="fase2.1:TalMarkeringType">
+    <xs:annotation>
+      <xs:documentation>Markerign der fortæller om dere rsikkerhdsoplysninger på angivelsen.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>
