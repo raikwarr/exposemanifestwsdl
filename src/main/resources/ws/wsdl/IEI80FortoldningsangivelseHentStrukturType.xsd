@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://skat.dk/begrebsmodel/2009/01/15/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:fase2.1="http://skat.dk/begrebsmodel/2009/01/15/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r5905</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="Container.xsd"/>
+         <xs:include schemaLocation="TransportDokument.xsd"/>
+         <xs:include schemaLocation="Transportmaade.xsd"/>
+         <xs:include schemaLocation="Transportmiddel.xsd"/>
+         <xs:include schemaLocation="Transportdeklaration.xsd"/>
+         <xs:include schemaLocation="Ankomstdeklaration.xsd"/>
+         <xs:include schemaLocation="ManifestPost.xsd"/>
+         <xs:include schemaLocation="ToldDeklaration.xsd"/>
+         <xs:element name="IEI80FortoldningsangivelseHentStruktur" type="fase2.1:IEI80FortoldningsangivelseHentStrukturType"/>
+         <xs:complexType name="IEI80FortoldningsangivelseHentStrukturType">
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+               <xs:element name="IEI80">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element name="NøgleReferenceValg">
+                           <xs:complexType>
+                              <xs:choice>
+                                 <xs:sequence>
+                                    <xs:element name="Nøgle">
+                                       <xs:complexType>
+                                          <xs:sequence>
+
+                                             <xs:element ref="fase2.1:ContainerID" minOccurs="0"/>
+
+                                             <xs:element ref="fase2.1:TransportDokumentType"/>
+                  
+                                             <xs:element ref="fase2.1:TransportDokumentReference"/>
+                  
+                                             <xs:element ref="fase2.1:TransportmådeKode"/>
+
+                                             <xs:element ref="fase2.1:TransportmiddelIdentitet" minOccurs="0"/>
+
+
+
+                                             <xs:element ref="fase2.1:TransportdeklarationRuteReferenceNummer" minOccurs="0"/>
+
+                                             <xs:element ref="fase2.1:AnkomstdeklarationForventetAnkomstDatoTid"/>
+                                             <xs:element name="Transportdeklaration">
+                                                <xs:complexType>
+                                                   <xs:sequence>
+                                                      <xs:element ref="fase2.1:TransportdeklarationReferenceNummer"/>
+
+                                                      <xs:element ref="fase2.1:ManifestPostLøbeNummer" minOccurs="0"/>
+
+
+                                                   </xs:sequence>
+                                                </xs:complexType>
+                                             </xs:element>
+                                          </xs:sequence>
+                                       </xs:complexType>
+                                    </xs:element>
+				
+				                             </xs:sequence>
+                                 <xs:sequence>
+				
+                                    <xs:element name="ReferenceListe">
+                                       <xs:complexType>
+                                          <xs:sequence>
+
+                                             <xs:element name="Reference" minOccurs="1" maxOccurs="999">
+                                                <xs:complexType>
+                                                   <xs:sequence>
+                                                      <xs:element ref="fase2.1:ToldDeklarationReferenceNummer"/>
+                                                   </xs:sequence>
+                                                </xs:complexType>
+                                             </xs:element>
+                                          </xs:sequence>
+                                       </xs:complexType>
+                                    </xs:element>
+
+                                 </xs:sequence>
+                              </xs:choice>
+                           </xs:complexType>
+                        </xs:element>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>
